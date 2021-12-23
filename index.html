@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả điện thoại</title>
+    <script src="mobile.js"></script>
+</head>
+<body>
+<script>
+    let mobile1 = new Mobile(88, [], [], [], true);
+    let mobile2 = new Mobile(50, [], [], [], false);
+    let mobile3 = new Mobile(30, [], [], [], true);
+
+    if (mobile1.checkstatus() === true) {
+        alert('DT 1 dang bat');
+    }
+    mobile1.creatMessage('Hello');
+    mobile1.sentMessage('hello2', mobile2);
+    mobile2.reciveMessage('hello2', mobile1);
+    mobile3.chargeBattery();
+    alert('Pin Dt 3 : ' + mobile3.battery)
+</script>
+</body>
+</html>
